@@ -24,6 +24,7 @@ declare namespace plugin {
     | 'detect-object-injection'
     | 'detect-possible-timing-attacks'
     | 'detect-pseudoRandomBytes'
+    | 'detect-taint'
     | 'detect-unsafe-regex';
 }
 
@@ -43,6 +44,17 @@ declare const plugin: Required<Pick<ESLint.Plugin, 'meta'>> & {
    * {@linkcode plugin.RuleName | RuleName}.
    */
   rules: Record<plugin.RuleName, Rule.RuleModule>;
+
+  /**
+   * Reusable analysis helpers shipped alongside the rules.
+   */
+  utils: {
+    taintTracker: Rule.RuleModule & {
+      createTaintRule: (overrides?: Record<string, unknown>) => Rule.RuleModule;
+      TaintTracker: new (...args: unknown[]) => unknown;
+      [key: string]: unknown;
+    };
+  };
 
   /**
    * Default severity of every rule, kept for backwards compatibility with

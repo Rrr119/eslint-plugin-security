@@ -78,6 +78,7 @@ npm test
 | [detect-object-injection](docs/rules/detect-object-injection.md)                             | Detects "variable[key]" as a left- or right-hand assignment operand.                                                          | ✅  |
 | [detect-possible-timing-attacks](docs/rules/detect-possible-timing-attacks.md)               | Detects insecure comparisons (`==`, `!=`, `!==` and `===`), which check input sequentially.                                   | ✅  |
 | [detect-pseudoRandomBytes](docs/rules/detect-pseudoRandomBytes.md)                           | Detects if "pseudoRandomBytes()" is in use, which might not give you the randomness you need and expect.                      | ✅  |
+| [detect-taint](docs/rules/detect-taint.md)                                                   | Detects cross-function source-to-sink injection flows with lightweight taint tracking.                                        |     |
 | [detect-unsafe-regex](docs/rules/detect-unsafe-regex.md)                                     | Detects potentially unsafe regular expressions, which may take a very long time to run, blocking the event loop.              | ✅  |
 
 <!-- end auto-generated rules list -->

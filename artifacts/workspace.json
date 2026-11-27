@@ -1,0 +1,17 @@
+{
+  "root": "/home/dev/feedback/uid43099",
+  "B": "/home/dev/feedback/uid43099",
+  "sha": "496de65addf04e40e1de72ff96f5f96661d2b637",
+  "wslDistro": "Ubuntu-26.04",
+  "source": {
+    "owner": "eslint-community",
+    "repo": "eslint-plugin-security",
+    "sha": "496de65addf04e40e1de72ff96f5f96661d2b637"
+  },
+  "fork": {
+    "owner": "Rrr119",
+    "repo": "eslint-plugin-security",
+    "cloneUrl": "https://github.com/Rrr119/eslint-plugin-security.git"
+  },
+  "at": "2026-11-27T03:26:37.382Z"
+}

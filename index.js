@@ -25,6 +25,7 @@ const plugin = {
     'detect-disable-mustache-escape': require('./rules/detect-disable-mustache-escape'),
     'detect-object-injection': require('./rules/detect-object-injection'),
     'detect-new-buffer': require('./rules/detect-new-buffer'),
+    'detect-taint': require('./rules/detect-taint'),
     'detect-bidi-characters': require('./rules/detect-bidi-characters'),
     'detect-invisible-characters': require('./rules/detect-invisible-characters'),
   },
@@ -42,8 +43,12 @@ const plugin = {
     'detect-disable-mustache-escape': 0,
     'detect-object-injection': 0,
     'detect-new-buffer': 0,
+    'detect-taint': 0,
     'detect-bidi-characters': 0,
     'detect-invisible-characters': 0,
+  },
+  utils: {
+    taintTracker: require('./utils/taint-tracker'),
   },
   configs: {}, // was assigned later so we can reference `plugin`
 };
